@@ -37,4 +37,32 @@ zipped = zip(x, y, z)
 print(list(zipped))
 
 
-# map
+# map()
+mapped = map(ord, "peng")  # ord，求出每个字母的编码
+print(list(mapped))
+
+print(list(map(pow, [1, 2, 3], [1, 2, 3])))
+
+# fliter
+print(list(filter(str.islower, "afsfaFASDFsf")))  # 将小写字母过滤出来
+s = filter(str.islower, "afsfaFASDFsf")
+# 可迭代对象可以重复使用
+# 迭代器是一次性的
+print("-------------------------------")
+mapped = map(ord, "asfa")
+print(list(mapped))  # 正常打印
+print(list(mapped))  # 输出空
+
+# iter() 迭代器
+l = [1, 2, 3, 4]
+y = [1, 2, 3, 4]
+y = iter(y)
+print(type(x))
+print(type(y))
+
+print(next(y, "迭代器到末尾啦~"))
+print(next(y, "迭代器到末尾啦~"))
+print(next(y, "迭代器到末尾啦~"))
+print(next(y, "迭代器到末尾啦~"))
+print(next(y, "迭代器到末尾啦~"))
+
